@@ -5,11 +5,10 @@ def buildbagdict(rules):
     bags_dict = {}
     for rule in rules:
         bag, contain = rule.split(' contain ', 2)
-        if contain.strip() == 'no other':
+        if contain == 'no other':
             continue
         contain = contain.split(', ')
         for bag_type in contain:
-            bag_type.strip()
             if bag_type[2:] not in bags_dict:
                 bags_dict[bag_type[2:]] = []
             bags_dict[bag_type[2:]].append(bag)
