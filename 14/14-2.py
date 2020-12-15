@@ -1,4 +1,3 @@
-import os
 
 def write(memory, address, value):
     if address.count('X') == 0:
@@ -21,8 +20,7 @@ def write_helper(bitmasks):
     return memory
 
 bitmasks = []
-dir_path = os.path.dirname(os.path.realpath(__file__))
-with open(dir_path + '/' + 'input.txt') as f:
+with open('input.txt') as f:
     mem_assign = None
     for line in f:
         data = line.strip().split(' = ')

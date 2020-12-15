@@ -1,4 +1,3 @@
-import os
 
 def findtime(buses):
     jump = buses[0][0]
@@ -10,8 +9,7 @@ def findtime(buses):
     return i
 
 buses = []
-dir_path = os.path.dirname(os.path.realpath(__file__))
-with open(dir_path + '/' + 'input.txt') as f:
+with open('input.txt') as f:
     f.readline()
     for offset, symbol in enumerate(f.readline().rstrip().split(',')):
         if symbol != 'x':

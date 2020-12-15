@@ -1,4 +1,3 @@
-import os
 
 # Checks if number has the property
 def isvalid(numbers_queue, number):
@@ -9,8 +8,7 @@ def isvalid(numbers_queue, number):
     return False
 
 numbers = []
-dir_path = os.path.dirname(os.path.realpath(__file__))
-with open(dir_path + '/' + 'input.txt') as f:
+with open('input.txt') as f:
     for line in f:
         numbers.append(int(line))
 

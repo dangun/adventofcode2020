@@ -1,4 +1,3 @@
-import os
 
 def getquestionsum(group):
     individuals = group.strip().split('\n')
@@ -9,8 +8,7 @@ def getquestionsum(group):
         answers = answers.intersection(set(individual_answers))
     return len(answers)
 
-dir_path = os.path.dirname(os.path.realpath(__file__))
-with open(dir_path + '/' + 'input.txt') as f:
+with open('input.txt') as f:
     text = f.read()
 
 group_answers = text.split('\n\n')

@@ -1,4 +1,3 @@
-import os
 
 def findfirstbus(buses, time):
     i = time
@@ -11,8 +10,7 @@ def findfirstbus(buses, time):
 
 time = 0
 buses = []
-dir_path = os.path.dirname(os.path.realpath(__file__))
-with open(dir_path + '/' + 'input.txt') as f:
+with open('input.txt') as f:
     time = int(f.readline())
     buses = [int(bus) for bus in f.readline().rstrip().split(',') if bus != 'x']
 

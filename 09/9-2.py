@@ -1,4 +1,3 @@
-import os
 
 # Modifies numbers_queue to valid subset
 def findsubset(numbers, numbers_queue, number):
@@ -13,8 +12,7 @@ def findsubset(numbers, numbers_queue, number):
     return False     
 
 numbers = []
-dir_path = os.path.dirname(os.path.realpath(__file__))
-with open(dir_path + '/' + 'input.txt') as f:
+with open('input.txt') as f:
     for line in f:
         numbers.append(int(line))
 

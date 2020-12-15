@@ -1,4 +1,3 @@
-import os 
 import operator
 from functools import reduce
 
@@ -25,8 +24,7 @@ def traverseroadmap(roadmap, right, down):
 
     return tree_count
 
-dir_path = os.path.dirname(os.path.realpath(__file__))
-with open(dir_path + '/' + 'input.txt') as f:
+with open('input.txt') as f:
     area = f.readlines()
 
 roadmap = createroadmap(area)

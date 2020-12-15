@@ -1,4 +1,3 @@
-import os 
 from itertools import combinations
 
 sum = 2020
@@ -8,8 +7,7 @@ def findsumpair(sum, values):
         if target[0] + target[1] == sum:
             return target
 
-dir_path = os.path.dirname(os.path.realpath(__file__))
-with open(dir_path + '/' + 'input.txt') as f:
+with open('input.txt') as f:
     values = [int(x) for x in f]
 
 value_pair = findsumpair(2020, values)

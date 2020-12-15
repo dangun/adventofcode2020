@@ -1,5 +1,3 @@
-import os
-
 # Find all combinations of adapters 
 # Using dynamic programming, checking the previous possibilities
 def adapterchain(adapters):
@@ -21,8 +19,7 @@ def adapterchain(adapters):
     return paths[-1] # Return last 
 
 adapters = []
-dir_path = os.path.dirname(os.path.realpath(__file__))
-with open(dir_path + '/' + 'input.txt') as f:
+with open('input.txt') as f:
     for line in f:
         adapters.append(int(line))
 

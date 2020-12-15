@@ -1,4 +1,3 @@
-import os
 import re
 
 class Passport:
@@ -84,8 +83,7 @@ def extract_passports(text):
         passport_list.append(passport)
     return passport_list
 
-dir_path = os.path.dirname(os.path.realpath(__file__))
-with open(dir_path + '/' + 'input.txt') as f:
+with open('input.txt') as f:
     text = f.read()
 
 passport_list = extract_passports(text)

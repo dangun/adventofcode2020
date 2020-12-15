@@ -1,5 +1,3 @@
-import os
-
 # Find all combinations of adapters 
 # Using tribonacci sequence, assumes no 2 jumps already exist
 def adapterchain(adapters):
@@ -20,8 +18,7 @@ def adapterchain(adapters):
     return combinations
 
 adapters = []
-dir_path = os.path.dirname(os.path.realpath(__file__))
-with open(dir_path + '/' + 'input.txt') as f:
+with open('input.txt') as f:
     for line in f:
         adapters.append(int(line))
 

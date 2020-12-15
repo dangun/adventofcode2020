@@ -1,4 +1,3 @@
-import os
 import numpy as np
 
 def process(seats):
@@ -30,8 +29,7 @@ def process(seats):
         seats = change_matrix * seats # Multiply each corresponding element
     
 seats = [] # 0 = floor, 1 = occupied, -1 = empty
-dir_path = os.path.dirname(os.path.realpath(__file__))
-with open(dir_path + '/' + 'input.txt') as f:
+with open('input.txt') as f:
     row = []
     for line in f:
         row =  [-1 if x == 'L' else 0 for x in line.strip()] 

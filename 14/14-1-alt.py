@@ -1,4 +1,3 @@
-import os
 import re
 
 def decode(bitmasks):
@@ -9,8 +8,7 @@ def decode(bitmasks):
     return memory
 
 bitmasks = []
-dir_path = os.path.dirname(os.path.realpath(__file__))
-with open(dir_path + '/' + 'input.txt') as f:
+with open('input.txt') as f:
     current_mask = None
     for line in f:
         data = line.strip().split(' = ')

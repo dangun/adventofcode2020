@@ -1,4 +1,3 @@
-import os
 import re
 
 def buildbagdict(rules):
@@ -21,8 +20,7 @@ def recursivecount(bag_type, bags_set, bags_dict):
             recursivecount(bag, bags_set, bags_dict)
 
 rules = []
-dir_path = os.path.dirname(os.path.realpath(__file__))
-with open(dir_path + '/' + 'input.txt') as f:
+with open('input.txt') as f:
     for rule in f:
         rules.append(re.sub(r' (bag)s?|\.$|\n', '', rule))
 

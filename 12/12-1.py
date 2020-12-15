@@ -1,4 +1,3 @@
-import os
 
 def move(instructions):
     shipx = 0
@@ -44,8 +43,7 @@ def move(instructions):
     return (shipx, shipy)
 
 instructions = [] # Tuples, (action, value)
-dir_path = os.path.dirname(os.path.realpath(__file__))
-with open(dir_path + '/' + 'input.txt') as f:
+with open('input.txt') as f:
     for line in f:
         instructions.append((line[0], int(line[1:])))
 

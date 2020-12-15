@@ -1,5 +1,3 @@
-import os
-
 # Find chain that contains all adapters, 
 def adapterchain(adapters):
     diff = [0, 0, 0]
@@ -12,8 +10,7 @@ def adapterchain(adapters):
     return diff[0] * diff[2]
 
 adapters = []
-dir_path = os.path.dirname(os.path.realpath(__file__))
-with open(dir_path + '/' + 'input.txt') as f:
+with open('input.txt') as f:
     for line in f:
         adapters.append(int(line))
 

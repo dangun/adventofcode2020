@@ -1,4 +1,3 @@
-import os
 
 btranslate = {
     ord('B'): ord('1'), 
@@ -11,8 +10,7 @@ def getseatid(bytestring):
     bytestring = bytestring.translate(btranslate)
     return int(bytestring, 2)
 
-dir_path = os.path.dirname(os.path.realpath(__file__))
-with open(dir_path + '/' + 'input.txt') as f:
+with open('input.txt') as f:
     text = f.readlines()
 
 seatids = []

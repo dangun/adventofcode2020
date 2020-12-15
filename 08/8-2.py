@@ -1,4 +1,3 @@
-import os
 
 OP = 0
 ARG = 1
@@ -27,8 +26,7 @@ def execute(ins_list, change):
     return (i, acc)
 
 ins_list = []
-dir_path = os.path.dirname(os.path.realpath(__file__))
-with open(dir_path + '/' + 'input.txt') as f:
+with open('input.txt') as f:
     for line in f:
         ins_list.append(tuple(line.split()))
 

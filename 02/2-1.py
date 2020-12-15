@@ -1,10 +1,8 @@
-import os 
-
+ 
 passwords = []
 correct_passwords = []
 
-dir_path = os.path.dirname(os.path.realpath(__file__))
-with open(dir_path + '/' + 'input.txt') as f:
+with open('input.txt') as f:
     passwords = f.readlines()
 
 for line in passwords:
