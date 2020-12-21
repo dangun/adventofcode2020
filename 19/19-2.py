@@ -32,6 +32,9 @@ for rule_number, rule_letter in re.findall(r'(\d+): \"([a-z])', data[0]):
 
 messages = [line.strip() for line in data[1].splitlines()]
 
+rules[8] = [[42], [42, 8]]
+rules[11] = [[42, 31], [42, 11, 31]]
+
 result = 0
 for message in messages:
     if solve(message, [0]):
